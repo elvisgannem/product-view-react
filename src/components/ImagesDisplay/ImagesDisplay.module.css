@@ -14,4 +14,10 @@
 .img {
     width: 20%;
     border-radius: 10px;
+    cursor: pointer;
+}
+
+.img:hover{
+    transition: 0.5s;
+    opacity: 0.5;
 }
