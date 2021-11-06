@@ -1,0 +1,47 @@
+.container {
+    padding: 3rem 1rem;
+}
+
+h2 {
+    color: var(--orange);
+    font-size: 0.8rem;
+}
+
+h1 {
+    margin: 0;
+    color: var(--verydarkblue);
+}
+
+.description {
+    color: var(--darkblue);
+}
+
+.actualPrice {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.actualPrice p {
+    margin: 0;
+}
+
+.actualPrice p:first-child{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.actualPrice p:nth-child(2n){
+    background: var(--paleorange);
+    color: var(--orange);
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.7rem;
+}
+
+.oldPrice {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--darkblue);
+    text-decoration: line-through;
+}

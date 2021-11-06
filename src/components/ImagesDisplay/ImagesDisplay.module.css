@@ -1,0 +1,17 @@
+.principalImage {
+    width: 400px;
+    border-radius: 20px;
+}
+
+.secondaryContainer {
+    display: flex;
+    width: 400px;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.img {
+    width: 20%;
+    border-radius: 10px;
+}
