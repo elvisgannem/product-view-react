@@ -1,0 +1,39 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.firstContainer{
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+li {
+    color: var(--darkblue);
+}
+
+.rightContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    margin-left: 1rem;
+}
+

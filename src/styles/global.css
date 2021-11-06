@@ -1,0 +1,10 @@
+:root{
+    --darkblue: hsl(219, 9%, 45%);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh sans', sans-serif;
+}
