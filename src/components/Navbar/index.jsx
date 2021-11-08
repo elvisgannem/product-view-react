@@ -3,8 +3,11 @@ import Logo from  '../../images/logo.svg'
 import IconCart from '../../images/icon-cart.svg'
 import Avatar from '../../images/image-avatar.png'
 import styles from './Navbar.module.css'
+import { CartContext } from '../../context/CartContext'
 
 const Navbar = () => {
+    const cartContext = React.useContext(CartContext);
+
     return (
         <nav>
             <div className={styles.firstContainer}>
@@ -23,7 +26,13 @@ const Navbar = () => {
                 </div>
             </div>
             <div className={styles.rightContainer}>
-                <img src={IconCart} alt="Cart" />
+                {cartContext.cartItems > 0 ?
+                    <div className={styles.notifications}>
+                        {cartContext.cartItems}
+                    </div>
+                    : ''
+                }
+                <img src={IconCart} alt="Cart" onClick={() => cartContext.setCartItems(0)} className={styles.cart} />
                 <img src={Avatar} alt="Avatar" className={styles.avatar} />
             </div>
         </nav>

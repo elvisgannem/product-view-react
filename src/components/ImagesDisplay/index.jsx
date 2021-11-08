@@ -1,9 +1,8 @@
 import React from 'react'
 import styles from './ImagesDisplay.module.css'
-import ImageProduct1 from '../../images/image-product-1.jpg'
 
 const ImagesDisplay = ({productImages}) => {
-    const [principalImage, setPrincipalImage] = React.useState(ImageProduct1)
+    const [principalImage, setPrincipalImage] = React.useState(productImages[0].image)
     
     return (
         <div>

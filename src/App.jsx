@@ -1,3 +1,5 @@
+import React from 'react'
+import { CartContext } from './context/CartContext'
 import Navbar from './components/Navbar/index'
 import ImagesDisplay from './components/ImagesDisplay/index'
 import ProductDescription from './components/ProductDescription/index'
@@ -30,14 +32,19 @@ const productImages = [
 ]
 
 function App() {
+  
+  const [cartItems, setCartItems] = React.useState(0)
+  
   return (
-    <div className="App">
-      <Navbar />
-      <div className="container">
-        <ImagesDisplay productImages={productImages} />
-        <ProductDescription />
+    <CartContext.Provider value={{ cartItems, setCartItems }}>
+      <div className="App">
+        <Navbar />
+        <div className="container">
+          <ImagesDisplay productImages={productImages} />
+          <ProductDescription />
+        </div>
       </div>
-    </div>
+    </CartContext.Provider>
   );
 }
 
