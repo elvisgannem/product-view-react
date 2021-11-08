@@ -35,6 +35,13 @@
     border-radius: 5px;
     padding: 1rem 4rem;
     box-shadow: 0 4px 10px var(--orange);
+    cursor: pointer;
+    outline: none;
+}
+
+.addToCart button:hover {
+    transition: 0.5s;
+    transform:scale(1.05, 1.05);
 }
 
 .addToCart button img {
