@@ -1,11 +1,11 @@
 .principalImage {
-    width: 400px;
+    max-width: 90%;
     border-radius: 20px;
 }
 
 .secondaryContainer {
     display: flex;
-    width: 400px;
+    max-width: 90%;
     gap: 1.5rem;
     justify-content: center;
     margin-top: 1rem;
@@ -20,4 +20,11 @@
 .img:hover{
     transition: 0.5s;
     opacity: 0.5;
+}
+
+@media screen and (max-width: 700px) {
+    .secondaryContainer{
+        padding: 1rem 0;
+        margin: 0 auto;
+    }
 }

@@ -55,3 +55,36 @@ li {
 .cart {
     cursor: pointer;
 }
+
+.mobile{
+    display: none;
+}
+
+.mobileContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobileContainer div {
+    display: flex;
+    align-items: center;
+}
+
+.mobileMenu {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    nav{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 700px) {
+    .desktop{
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}
