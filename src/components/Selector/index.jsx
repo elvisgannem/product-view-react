@@ -7,6 +7,7 @@ import { CartContext } from '../../context/CartContext'
 
 const Selector = () => {
     const [selector, setSelector] = React.useState(0)
+    const [showQuantityMessage, setShowQuantityMessage] = React.useState(false)
     const cartContext = React.useContext(CartContext)
 
     const plusSelector = () => {
@@ -20,7 +21,13 @@ const Selector = () => {
     }
 
     const addToCart = () => {
-        cartContext.setCartItems((prevState) => prevState + 1)
+        if(selector > 0){
+            cartContext.setCartItems((prevState) => prevState + 1)
+            setSelector(0)
+            setShowQuantityMessage(false)
+        } else {
+            setShowQuantityMessage(true)
+        }
     }
 
 
@@ -44,6 +51,12 @@ const Selector = () => {
                     Add to cart
                 </button>
             </div>
+
+            { showQuantityMessage ? 
+                <p>You must select the desired quantity</p>
+                :
+                ''
+            }
         </div>
     )
 }
